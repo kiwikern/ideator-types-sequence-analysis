@@ -16,9 +16,11 @@ if __name__=='__main__':
     else:
         y_pred = model.predict(x_toclassify)
 
-    print(y_pred)
-    y_pred = [0 if val<0.5 else 1 for val in y_pred]
-    print(y_pred)
+    sys.stdout.write(str(y_pred))
+    sys.stdout.flush()
+    sys.exit(0)
+    #y_pred = [0 if val<0.5 else 1 for val in y_pred]
+    #print(y_pred)
 
 #[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
 #[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
